@@ -2,16 +2,10 @@ import os
 import sys
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
-#from pyspark.sql.types import structType,structField,IntergerType,stringType
+
 os.environ["SPARK_HOME"] = "C:/Users/ponna/OneDrive/Desktop/PYSPARK_TEST/PYSPARK_VERSIONS/spark-3.5.4-bin-hadoop3\spark-3.5.4-bin-hadoop3"
-#os.environ["HADOOP_HOME"] ="C:/Users/ponna/OneDrive/Desktop/PYSPARK_TEST/PYSPARK_VERSIONS/hadoop-3.0.0/hadoop-3.0.0/bin/winutils.exe"
-#os.environ["JAVA_HOME"] = r"C:/Program Files/Java/jdk-11/bin"
 os.environ["PYSPARK_PYTHON"] = sys.executable
 os.environ["PYSPARK_DRIVER_PYTHON"]= sys.executable
-
-print("JAVA_HOME:", os.environ.get("JAVA_HOME"))
-print("SPARK_HOME:", os.environ.get("SPARK_HOME"))
-#print("HADOOP_HOME:", os.environ.get("HADOOP_HOME"))
 
 # Initialize Spark Session
 spark = SparkSession.builder \
